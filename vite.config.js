@@ -12,22 +12,6 @@ export default defineConfig({
     },
   },
   build: {
-    // Otimizações de build
     minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-        },
-      },
-    },
-    // Compressão de assets
-    assetsInlineLimit: 4096,
-    chunkSizeWarningLimit: 1000,
-  },
-  // Pré-carregamento de módulos
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
   },
 })
