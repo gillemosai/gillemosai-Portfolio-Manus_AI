@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { Mail, MapPin, Linkedin, Instagram, Youtube, Facebook, ExternalLink, Brain, Palette, Code, Megaphone } from 'lucide-react'
 import { motion } from 'framer-motion'
 import logoImage from './assets/logocheiatransp.png'
-import profileImage from './assets/Capturadetela2025-06-06082107.png'
+import profileImage from './assets/gil_profile_professional.png'
 import aiSectionImage from './assets/ai_section_image.png'
 import amoNutelaImage from './assets/nutela-redu-optimized.png'
 import logoDraJulianaImage from './assets/juliana-redu-optimized.png'
@@ -119,79 +119,101 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 gradient-bg opacity-10"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.img
-              src={profileImage}
-              alt="Gil Lemos"
-              className="w-48 h-48 rounded-full mx-auto mb-8 object-cover animate-glow"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-            />
-            
-            <motion.h1
-              className="text-6xl md:text-8xl font-bold mb-6 gradient-text"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Gil Lemos
-            </motion.h1>
-            
-            <motion.p
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Criador de Conteúdo Digital | Especialista em IA
-            </motion.p>
-            
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Foto à esquerda */}
             <motion.div
-              className="flex flex-wrap justify-center gap-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center lg:justify-start"
             >
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Marketing
-              </Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Inteligência Artificial
-              </Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Conteúdo Digital
-              </Badge>
+              <motion.img
+                src={profileImage}
+                alt="Gil Lemos"
+                className="w-80 h-auto object-cover animate-glow rounded-2xl shadow-2xl"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              />
             </motion.div>
             
+            {/* Conteúdo à direita */}
             <motion.div
-              className="flex justify-center gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-center lg:text-left"
             >
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection('portfolio')}
-                className="animate-glow"
+              <motion.h1
+                className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Ver Portfólio
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => scrollToSection('contact')}
+                Gil Lemos
+              </motion.h1>
+              
+              <motion.p
+                className="text-xl md:text-2xl text-muted-foreground mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
-                Entrar em Contato
-              </Button>
+                Criador de Conteúdo Digital | Especialista em IA
+              </motion.p>
+              
+              <motion.p
+                className="text-lg text-muted-foreground mb-8 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                Profissional com formação em Marketing e Pós-graduação em Inteligência Artificial, 
+                atuo há mais de cinco anos na área de comunicação digital, criando conteúdo 
+                inovador e estratégias eficazes para o mundo digital.
+              </motion.p>
+              
+              <motion.div
+                className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                <Badge variant="secondary" className="text-lg py-2 px-4">
+                  Marketing
+                </Badge>
+                <Badge variant="secondary" className="text-lg py-2 px-4">
+                  Inteligência Artificial
+                </Badge>
+                <Badge variant="secondary" className="text-lg py-2 px-4">
+                  Conteúdo Digital
+                </Badge>
+              </motion.div>
+              
+              <motion.div
+                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+              >
+                <Button 
+                  size="lg" 
+                  onClick={() => scrollToSection('portfolio')}
+                  className="animate-glow"
+                >
+                  Ver Portfólio
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Entrar em Contato
+                </Button>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
         
         <motion.div
