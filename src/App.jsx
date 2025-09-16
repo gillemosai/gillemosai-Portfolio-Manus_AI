@@ -120,30 +120,30 @@ function App() {
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 gradient-bg opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Foto à esquerda */}
+          <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
+            {/* Foto à esquerda - ocupa 2 colunas */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex justify-center lg:justify-start"
+              className="lg:col-span-2 flex justify-center"
             >
               <motion.img
                 src={profileImage}
                 alt="Gil Lemos"
-                className="w-80 h-auto object-cover animate-glow rounded-2xl shadow-2xl"
+                className="w-full max-w-sm h-auto object-cover animate-glow rounded-2xl shadow-2xl"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
               />
             </motion.div>
             
-            {/* Conteúdo à direita */}
+            {/* Conteúdo à direita - ocupa 3 colunas */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center lg:text-left"
+              className="lg:col-span-3 text-center lg:text-left"
             >
               <motion.h1
                 className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
