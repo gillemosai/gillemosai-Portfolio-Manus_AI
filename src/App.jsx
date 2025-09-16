@@ -9,9 +9,10 @@ import profileImage from './assets/gil_profile_tech_clean.png'
 import aiSectionImage from './assets/ai_section_image.png'
 import amoNutelaImage from './assets/nutela-redu-optimized.png'
 import logoDraJulianaImage from './assets/juliana-redu-optimized.png'
-import logoUqMarketingImage from './assets/uqmarketing-redu-optimized.png'
-import wallpaperWindowsAiImage from './assets/windows-redu-optimized.png'
+import logoUQMarketingImage from './assets/uqmarketing-redu-optimized.png'
+import wallpaperWindowsAIImage from './assets/windows-redu-optimized.png'
 import './App.css'
+import OptimizedImage from './components/OptimizedImage'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -129,7 +130,7 @@ function App() {
             >
               <motion.img
                 src={profileImage}
-                alt="Gil Lemos"
+                alt="Gil Lemos - Especialista em IA e Marketing Digital"
                 className="w-full max-w-sm h-auto object-cover animate-glow rounded-2xl shadow-2xl"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
