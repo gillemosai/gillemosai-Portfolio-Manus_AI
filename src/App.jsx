@@ -12,7 +12,6 @@ import logoDraJulianaImage from './assets/juliana-redu-optimized.png'
 import logoUQMarketingImage from './assets/uqmarketing-redu-optimized.png'
 import wallpaperWindowsAIImage from './assets/windows-redu-optimized.png'
 import './App.css'
-import OptimizedImage from './components/OptimizedImage'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -50,77 +49,71 @@ function App() {
     {
       title: "Amo Nutela",
       description: "Projeto de design e ilustração para a marca Nutela, explorando diferentes abordagens visuais.",
-      category: "Design",
-      image: amoNutelaImage,
-      link: "https://www.behance.net/gallery/201490029/Amo-Nutela"
+      image: amoNutelaImage
     },
     {
       title: "Logo Dra. Juliana",
       description: "Criação de identidade visual e logotipo para a Dra. Juliana, com foco em profissionalismo e reconhecimento.",
-      category: "Branding",
-      image: logoDraJulianaImage,
-      link: "https://www.behance.net/gallery/199633947/Apresentacao-Logo"
+      image: logoDraJulianaImage
     },
     {
       title: "Logo UQ Marketing",
       description: "Desenvolvimento de logotipo e identidade visual para a UQ Marketing, refletindo inovação e profissionalismo.",
-      category: "Branding",
-      image: logoUqMarketingImage,
-      link: "https://www.behance.net/gallery/65748737/uqmarketing"
+      image: logoUQMarketingImage
     },
     {
       title: "Windows AI Wallpaper",
       description: "Wallpaper temático sobre inteligência artificial, combinando elementos futuristas e a logo do Windows.",
-      category: "Design",
-      image: wallpaperWindowsAiImage,
-      link: "https://www.behance.net/gallery/200039415/Wallpaper-Windows-AI"
+      image: wallpaperWindowsAIImage
     }
   ]
 
-  const skills = [
-    { name: "Marketing Digital", icon: Megaphone, level: 95 },
-    { name: "Inteligência Artificial", icon: Brain, level: 90 },
-    { name: "Design Gráfico", icon: Palette, level: 85 },
-    { name: "Criação de Conteúdo", icon: Code, level: 92 }
-  ]
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3"
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-2"
             >
-              <img src={logoImage} alt="Gil Lemos Logo" className="h-10 w-auto" />
+              <img src={logoImage} alt="Logo" className="w-8 h-8" />
+              <span className="text-xl font-bold text-white">Gil Lemos</span>
             </motion.div>
             
-            <div className="hidden md:flex space-x-8">
-              {['home', 'portfolio', 'contact'].map((section) => (
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="hidden md:flex space-x-8"
+            >
+              {[
+                { id: 'home', label: 'Início' },
+                { id: 'portfolio', label: 'Portfólio' },
+                { id: 'contact', label: 'Contato' }
+              ].map((item) => (
                 <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors hover:text-primary ${
-                    activeSection === section ? 'text-primary' : 'text-muted-foreground'
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    activeSection === item.id ? 'text-primary' : 'text-white/70'
                   }`}
                 >
-                  {section === 'home' ? 'Início' : 
-                   section === 'portfolio' ? 'Portfólio' : 'Contato'}
+                  {item.label}
                 </button>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 gradient-bg opacity-10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-5 gap-12 items-center max-w-7xl mx-auto">
+      <section id="home" className="pt-20 pb-20 min-h-screen flex items-center">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-5 gap-12 items-center">
             {/* Foto à esquerda - ocupa 2 colunas */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -146,68 +139,69 @@ function App() {
               className="lg:col-span-3 text-center lg:text-left"
             >
               <motion.h1
-                className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
               >
                 Gil Lemos
               </motion.h1>
               
-              <motion.p
-                className="text-xl md:text-2xl text-muted-foreground mb-8"
-                initial={{ opacity: 0, y: 20 }}
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-2xl md:text-3xl text-white/90 mb-8 font-light"
               >
                 Criador de Conteúdo Digital | Especialista em IA
-              </motion.p>
+              </motion.h2>
               
               <motion.p
-                className="text-lg text-muted-foreground mb-8 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-lg text-white/70 mb-8 leading-relaxed max-w-2xl"
               >
                 Profissional com formação em Marketing e Pós-graduação em Inteligência Artificial, 
-                atuo há mais de cinco anos na área de comunicação digital, criando conteúdo 
-                inovador e estratégias eficazes para o mundo digital.
+                atuo há mais de cinco anos na área de comunicação digital, criando conteúdo inovador 
+                e estratégias eficazes para o mundo digital.
               </motion.p>
               
               <motion.div
-                className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start"
               >
-                <Badge variant="secondary" className="text-lg py-2 px-4">
+                <Badge variant="secondary" className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
                   Marketing
                 </Badge>
-                <Badge variant="secondary" className="text-lg py-2 px-4">
+                <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30">
                   Inteligência Artificial
                 </Badge>
-                <Badge variant="secondary" className="text-lg py-2 px-4">
+                <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
                   Conteúdo Digital
                 </Badge>
               </motion.div>
               
               <motion.div
-                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
-                <Button 
-                  size="lg" 
+                <Button
                   onClick={() => scrollToSection('portfolio')}
-                  className="animate-glow"
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3"
                 >
                   Ver Portfólio
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
+                <Button
                   onClick={() => scrollToSection('contact')}
+                  variant="outline"
+                  size="lg"
+                  className="border-white/30 text-white hover:bg-white/10 px-8 py-3"
                 >
                   Entrar em Contato
                 </Button>
@@ -215,22 +209,10 @@ function App() {
             </motion.div>
           </div>
         </div>
-        
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </motion.div>
       </section>
 
-
-
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-muted/30">
+      <section id="portfolio" className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -240,7 +222,7 @@ function App() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Portfólio</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Alguns dos meus trabalhos mais recentes em design, IA e criação de conteúdo
             </p>
           </motion.div>
@@ -290,109 +272,92 @@ function App() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Vamos Conversar?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Estou sempre aberto a novos projetos e oportunidades de colaboração
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <Card className="p-8 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl mb-6">Informações de Contato</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Email</h3>
-                        <p className="text-muted-foreground">gillemosai@email.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Localização</h3>
-                        <p className="text-muted-foreground">Vitória da Conquista, BA</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Card className="p-8 bg-white/5 border-white/10">
+                <CardHeader className="text-center">
+                  <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-2xl text-white">Email</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white/70 text-lg">gillemosai@email.com</p>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
-                <Card className="p-8 h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl mb-6">Redes Sociais</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex space-x-4">
-                      <a 
-                        href="https://www.instagram.com/gillemosai" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      >
-                        <Instagram className="w-6 h-6" />
-                      </a>
-                      <a 
-                        href="https://www.youtube.com/@gillemosai" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      >
-                        <Youtube className="w-6 h-6" />
-                      </a>
-                      <a 
-                        href="https://www.facebook.com/gillemosai" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      >
-                        <Facebook className="w-6 h-6" />
-                      </a>
-                      <a 
-                        href="https://www.linkedin.com/in/gillemosai/" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      >
-                        <Linkedin className="w-6 h-6" />
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Card className="p-8 bg-white/5 border-white/10">
+                <CardHeader className="text-center">
+                  <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-2xl text-white">Localização</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white/70 text-lg">Vitória da Conquista, BA</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
+
+          {/* Social Media Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="flex justify-center space-x-6 mt-12"
+          >
+            <a
+              href="https://www.instagram.com/gillemosai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.youtube.com/@gillemosai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <Youtube className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.facebook.com/gillemosai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gillemosai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-blue-800 flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border">
-        <div className="container mx-auto px-6 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Gil Lemos. Todos os direitos reservados.</p>
-        </div>
-      </footer>
     </div>
   )
 }
 
 export default App
-
-
