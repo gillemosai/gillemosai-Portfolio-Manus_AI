@@ -290,7 +290,7 @@ function App() {
                   <CardTitle className="text-2xl text-white">Email</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-white/70 text-lg">gillemosai@email.com</p>
+                  <p className="text-white/70 text-lg">gillemos@gmail.com</p>
                 </CardContent>
               </Card>
             </motion.div>
