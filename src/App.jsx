@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'portfolio', 'contact']
+      const sections = ['home', 'portfolio', 'contact']
       const scrollPosition = window.scrollY + 100
 
       sections.forEach(section => {
@@ -98,7 +98,7 @@ function App() {
             </motion.div>
             
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'portfolio', 'contact'].map((section) => (
+              {['home', 'portfolio', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -107,7 +107,6 @@ function App() {
                   }`}
                 >
                   {section === 'home' ? 'Início' : 
-                   section === 'about' ? 'Sobre' :
                    section === 'portfolio' ? 'Portfólio' : 'Contato'}
                 </button>
               ))}
@@ -227,100 +226,7 @@ function App() {
         </motion.div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Sobre Mim</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Profissional com formação em Marketing e Pós-graduação em Inteligência Artificial, 
-              atuo há mais de cinco anos na área de comunicação digital, criando conteúdo 
-              inovador e estratégias eficazes.
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-8">
-                <CardHeader>
-                  <CardTitle className="text-2xl mb-4">Formação & Experiência</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Graduado em Marketing</h3>
-                      <p className="text-muted-foreground">Base sólida em estratégias de comunicação e marketing digital</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Pós-graduado em Inteligência Artificial</h3>
-                      <p className="text-muted-foreground">Especialização em IA aplicada ao marketing e criação de conteúdo</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Criador de Conteúdo Digital</h3>
-                      <p className="text-muted-foreground">Mais de 5 anos criando conteúdo sobre tecnologia e IA</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h3 className="text-2xl font-bold mb-6">Habilidades</h3>
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="space-y-2"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <skill.icon className="w-5 h-5 text-primary" />
-                      <span className="font-medium">{skill.name}</span>
-                    </div>
-                    <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-muted rounded-full h-2">
-                    <motion.div
-                      className="h-2 rounded-full gradient-bg"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-muted/30">
