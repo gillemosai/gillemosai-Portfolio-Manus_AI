@@ -196,7 +196,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ---
 
 <div align="center">
-  <p>Desenvolvido com ❤️ por Gil Lemos</p>
+  <p>Desenvolvido por Gil Lemos 🎯</p>
   <p>
     <a href="https://www.instagram.com/gillemosai">Instagram</a> •
     <a href="https://www.youtube.com/@gillemosai">YouTube</a> •
