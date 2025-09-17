@@ -1,4 +1,4 @@
-MIT License
+MIT License with Restrictions
 
 Copyright (c) 2025 Gil Lemos
 
@@ -9,12 +9,12 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-1. O uso desta licença se aplica exclusivamente ao código-fonte e arquivos
-   relacionados à parte lógica do projeto.
-2. As imagens, ícones, logotipos e quaisquer outros recursos gráficos
-   presentes neste repositório **não estão incluídos nesta licença** e não
-   podem ser copiados, modificados, distribuídos, sublicenciados ou utilizados
-   para qualquer finalidade sem autorização expressa por escrito do autor.
+1. This license applies exclusively to the source code and files related to
+   the logical part of the project.
+2. Images, icons, logos, and any other graphic resources included in this
+   repository are **not covered by this license** and may not be copied,
+   modified, distributed, sublicensed, or used for any purpose without
+   the express written permission of the author.
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
