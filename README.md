@@ -1,4 +1,6 @@
-# 🚀 Portfólio Gil Lemos - Especialista em IA e Marketing Digital
+<div align="center">
+ <h1>🚀 Gil Lemos Portifólio com IA</h1>
+</div>
 
 <div align="center">
   <img src="src/assets/logocheiatransp.png" alt="Gil Lemos Logo" width="100" height="100">
@@ -17,7 +19,14 @@
 
 ## 📋 Sobre o Projeto
 
-Portfólio profissional desenvolvido para Gil Lemos (@gillemosai), especialista em Inteligência Artificial e Marketing Digital. O projeto apresenta uma interface moderna e responsiva, destacando experiência, projetos e formas de contato.
+Portfólio profissional desenvolvido por Gil Lemos (@gillemosai), especialista em Inteligência Artificial e Marketing Digital. 
+O projeto apresenta uma interface moderna e responsiva, destacando experiência, projetos e formas de contato.
+- Ferramentas utilizadas:  
+  💠Manus AI
+  💠Gemini(Nano Banana)
+  💠ChatGPT
+  💠Ms Copilot
+  
 
 ### 🎯 Características Principais
 
