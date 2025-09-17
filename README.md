@@ -2,9 +2,13 @@
 
 <div align="center">
   <img src="src/assets/logocheiatransp.png" alt="Gil Lemos Logo" width="100" height="100">
-  
-  **Portfólio profissional desenvolvido com React + Vite + Tailwind CSS**
-  
+</div>
+
+<div align="center">
+  <h3 style="margin: 0;">Criado com Inteligência Artificial do Manus AI</h3> 
+  <h4 style="margin: 0;">Portfólio profissional desenvolvido com React + Vite + Tailwind CSS</h4>
+        
+      
   [![Deploy Status](https://img.shields.io/badge/Deploy-Live-brightgreen)](https://gillemosai-kjvfe4.manus.space)
   [![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
   [![Vite](https://img.shields.io/badge/Vite-6.3.5-purple)](https://vitejs.dev/)
