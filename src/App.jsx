@@ -47,9 +47,9 @@ function App() {
 
   const portfolioItems = [
     {
-      title: "Amo Nutela",
-      description: "Projeto de design e ilustração para a marca Nutela, explorando diferentes abordagens visuais.",
-      image: amoNutelaImage
+      title: "Windows AI Wallpaper",
+      description: "Wallpaper temático sobre inteligência artificial, combinando elementos futuristas e a logo do Windows.",
+      image: wallpaperWindowsAIImage
     },
     {
       title: "Logo Dra. Juliana",
@@ -62,9 +62,9 @@ function App() {
       image: logoUQMarketingImage
     },
     {
-      title: "Windows AI Wallpaper",
-      description: "Wallpaper temático sobre inteligência artificial, combinando elementos futuristas e a logo do Windows.",
-      image: wallpaperWindowsAIImage
+      title: "Amo Nutela",
+      description: "Projeto de design e ilustração para a marca Nutela, explorando diferentes abordagens visuais.",
+      image: amoNutelaImage
     }
   ]
 
