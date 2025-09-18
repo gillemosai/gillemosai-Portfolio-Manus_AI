@@ -258,6 +258,29 @@ function App() {
               </motion.div>
             ))}
           </div>
+          
+          {/* Botão Behance */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <a
+              href="https://www.behance.net/gillemosai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Para ver mais clique aqui
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
