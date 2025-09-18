@@ -275,8 +275,17 @@ function App() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2"
               >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="flex-shrink-0"
+                >
+                  <path d="M6.5 4.5h3c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5h-3v-13zm0 2v9h3c2.49 0 4.5-2.01 4.5-4.5S11.99 6.5 9.5 6.5h-3zm11.5 2c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5z"/>
+                </svg>
                 Para ver mais clique aqui
               </Button>
             </a>
