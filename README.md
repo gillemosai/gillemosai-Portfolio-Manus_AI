@@ -166,7 +166,7 @@ gillemosai-portfolio/
 ## 🚀 Deploy
 
 O projeto está hospedado e pode ser acessado em:
-**[https://gillemosai-kjvfe4.manus.space](https://gillemosai-u6rckb.manus.space/)**
+**[Clique Aqui](https://gillemosai-u6rckb.manus.space/)**
 
 ### Opções de Deploy
 - **Netlify**: Arraste a pasta `dist/`
