@@ -11,6 +11,7 @@ import amoNutelaImage from './assets/nutela-redu-optimized.png'
 import logoDraJulianaImage from './assets/juliana-redu-optimized.png'
 import logoUQMarketingImage from './assets/uqmarketing-redu-optimized.png'
 import wallpaperWindowsAIImage from './assets/windows-redu-optimized.png'
+import fenixUXWallpaperImage from './assets/Fenix_UX_Wallpaper_reduzido.png'
 import './App.css'
 
 function App() {
@@ -65,6 +66,11 @@ function App() {
       title: "Amo Nutela",
       description: "Projeto de design e ilustração para a marca Nutela, explorando diferentes abordagens visuais.",
       image: amoNutelaImage
+    },
+    {
+      title: "Fenix UX Wallpaper",
+      description: "Wallpaper artístico com temática de fênix e UX design, simbolizando renascimento e inovação no design digital.",
+      image: fenixUXWallpaperImage
     }
   ]
 
